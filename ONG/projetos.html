@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos sociais da ONG Esperança Solidária e saiba como doar ou ser voluntário">
+    <title>Projetos Sociais - ONG Esperança Solidária</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        nav {
+            background-color: #5a67d8;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 20px;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: #5a67d8;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        h4 {
+            color: #667eea;
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .project-card {
+            background: #f7fafc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .donation-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .donation-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .donation-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .volunteer-section {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .volunteer-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .step-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Projetos Sociais</h1>
+            <p>Conheça nossas iniciativas que transformam vidas</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos Sociais</a></li>
+            <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <section id="projetos-ativos">
+                <h2>Nossos Projetos Ativos</h2>
+                <img src="imagens/projetos-gerais.jpg" alt="Diversos projetos sociais em andamento" class="hero-image">
+                
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="#" alt="Crianças em aula de reforço escolar">
+                        <div class="project-content">
+                            <span class="project-tag">Educação</span>
+                            <h3>Futuro Brilhante</h3>
+                            <p>
+                                Programa de reforço escolar e acompanhamento pedagógico para crianças e adolescentes 
+                                de 6 a 15 anos. Oferecemos aulas de português, matemática e inglês, além de apoio 
+                                com tarefas escolares.
+                            </p>
+                            <h4>Beneficiados:</h4>
+                            <p>300 crianças e adolescentes</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="#" alt="Jovens em curso de capacitação profissional">
+                        <div class="project-content">
+                            <span class="project-tag">Capacitação</span>
+                            <h3>Primeiro Emprego</h3>
+                            <p>
+                                Cursos profissionalizantes gratuitos para jovens de 16 a 24 anos. Oferecemos 
+                                capacitação em informática, atendimento ao cliente, administração e outras áreas, 
+                                além de orientação para o mercado de trabalho.
+                            </p>
+                            <h4>Beneficiados:</h4>
+                            <p>150 jovens por semestre</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="#" alt="Distribuição de alimentos para famílias">
+                        <div class="project-content">
+                            <span class="project-tag">Assistência</span>
+                            <h3>Alimento Solidário</h3>
+                            <p>
+                                Distribuição mensal de cestas básicas e kits de higiene para famílias em situação 
+                                de vulnerabilidade social. Também oferecemos refeições diárias na sede da ONG.
+                            </p>
+                            <h4>Beneficiados:</h4>
+                            <p>500 famílias mensalmente</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="#" alt="Atendimento médico gratuito">
+                        <div class="project-content">
+                            <span class="project-tag">Saúde</span>
+                            <h3>Saúde para Todos</h3>
+                            <p>
+                                Atendimento médico básico, campanhas de vacinação e ações de saúde preventiva. 
+                                Contamos com médicos, enfermeiros e dentistas voluntários que atendem a comunidade 
+                                gratuitamente.
+                            </p>
+                            <h4>Beneficiados:</h4>
+                            <p>800 pessoas por mês</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="#" alt="Crianças praticando esportes">
+                        <div class="project-content">
+                            <span class="project-tag">Esporte</span>
+                            <h3>Esporte e Vida</h3>
+                            <p>
+                                Atividades esportivas e recreativas para crianças e adolescentes. Oferecemos aulas 
+                                de futebol, vôlei, basquete, capoeira e judô, promovendo saúde, disciplina e 
+                                integração social.
+                            </p>
+                            <h4>Beneficiados:</h4>
+                            <p>200 crianças e adolescentes</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="#" alt="Atividades culturais com crianças">
+                        <div class="project-content">
+                            <span class="project-tag">Cultura</span>
+                            <h3>Arte e Cultura</h3>
+                            <p>
+                                Oficinas de música, teatro, dança, artesanato e artes plásticas. Desenvolvemos 
+                                talentos, estimulamos a criatividade e promovemos o acesso à cultura para crianças 
+                                e jovens da comunidade.
+                            </p>
+                            <h4>Beneficiados:</h4>
+                            <p>180 participantes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="como-doar">
+                <h2>Como Doar</h2>
+                <img src="#" alt="Pessoas fazendo doações" class="hero-image">
+                
+                <div class="donation-box">
+                    <h3>Suas doações transformam vidas!</h3>
+                    <p>
+                        Cada contribuição, não importa o valor, faz uma diferença significativa na vida de quem 
+                        mais precisa. Seja um doador e ajude-nos a continuar nosso trabalho social.
+                    </p>
+
+                    <div class="donation-methods">
+                        <div class="donation-card">
+                            <h4>PIX</h4>
+                            <p><strong>Chave CNPJ:</strong><br>12.345.678/0001-90</p>
+                            <p><strong>Chave E-mail:</strong><br>doacoes@esperancasolidaria.org.br</p>
+                        </div>
+
+                        <div class="donation-card">
+                            <h4>Transferência Bancária</h4>
+                            <p>
+                                <strong>Banco:</strong> Banco do Brasil<br>
+                                <strong>Agência:</strong> 1234-5<br>
+                                <strong>Conta Corrente:</strong> 67890-1<br>
+                                <strong>CNPJ:</strong> 12.345.678/0001-90
+                            </p>
+                        </div>
+
+                        <div class="donation-card">
+                            <h4>Depósito/TED</h4>
+                            <p>
+                                <strong>Banco:</strong> Caixa Econômica Federal<br>
+                                <strong>Agência:</strong> 0987<br>
+                                <strong>Operação:</strong> 003<br>
+                                <strong>Conta Poupança:</strong> 54321-6
+                            </p>
+                        </div>
+
+                        <div class="donation-card">
+                            <h4>Cartão de Crédito</h4>
+                            <p>
+                                Acesse nosso site:<br>
+                                <strong>www.esperancasolidaria.org.br/doar</strong><br>
+                                Doação única ou mensal em até 12x
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Outras Formas de Contribuir</h3>
+                <ul>
+                    <li><strong>Doação de Alimentos:</strong> Alimentos não perecíveis, frutas, legumes e verduras</li>
+                    <li><strong>Doação de Roupas:</strong> Roupas em bom estado, calçados, cobertores e toalhas</li>
+                    <li><strong>Material Escolar:</strong> Cadernos, lápis, canetas, mochilas e livros</li>
+                    <li><strong>Brinquedos:</strong> Brinquedos novos ou usados em bom estado</li>
+                    <li><strong>Produtos de Higiene:</strong> Sabonetes, shampoo, pasta de dente, fraldas</li>
+                    <li><strong>Nota Fiscal Paulista:</strong> Doe seus pontos para nossa ONG</li>
+                </ul>
+
+                <h4>Doações Presenciais</h4>
+                <p>
+                    <strong>Endereço:</strong> Rua da Solidariedade, 1000 - Bairro Esperança - Caxias do Sul/RS<br>
+                    <strong>Horário:</strong> Segunda a Sexta: 8h às 18h | Sábados: 9h às 13h
+                </p>
+            </section>
+
+            <section id="voluntariado">
+                <h2>Seja um Voluntário</h2>
+                <img src="#" alt="Voluntários em ação nos projetos" class="hero-image">
+                
+                <div class="volunteer-section">
+                    <h3>Junte-se ao nosso time de voluntários!</h3>
+                    <p>
+                        O voluntariado é uma experiência transformadora que enriquece não apenas a vida de quem 
+                        recebe ajuda, mas principalmente de quem a oferece. Venha fazer parte dessa corrente do bem!
+                    </p>
+
+                    <h4>Como se tornar um voluntário:</h4>
+                    <div class="volunteer-steps">
+                        <div class="step-card">
+                            <span class="step-number">1</span>
+                            <h5>Cadastre-se</h5>
+                            <p>Preencha o formulário de cadastro com seus dados e áreas de interesse</p>
+                        </div>
+
+                        <div class="step-card">
+                            <span class="step-number">2</span>
+                            <h5>Entrevista</h5>
+                            <p>Participe de uma conversa para conhecermos você e suas habilidades</p>
+                        </div>
+
+                        <div class="step-card">
+                            <span class="step-number">3</span>
+                            <h5>Capacitação</h5>
+                            <p>Receba treinamento sobre nossos projetos e metodologias de trabalho</p>
+                        </div>
+
+                        <div class="step-card">
+                            <span class="step-number">4</span>
+                            <h5>Atuação</h5>
+                            <p>Comece a fazer a diferença na vida de pessoas e comunidades</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Áreas de Atuação para Voluntários</h3>
+                <ul>
+                    <li><strong>Educação:</strong> Professores, pedagogos, estudantes universitários para reforço escolar</li>
+                    <li><strong>Saúde:</strong> Médicos, enfermeiros, dentistas, psicólogos, nutricionistas</li>
+                    <li><strong>Administrativo:</strong> Auxiliar em atividades administrativas e de gestão</li>
+                    <li><strong>Eventos:</strong> Ajudar na organização de eventos e campanhas</li>
+                    <li><strong>Marketing:</strong> Comunicação, design gráfico, fotografia, redes sociais</li>
+                    <li><strong>Jurídico:</strong> Advogados para orientação jurídica gratuita</li>
+                    <li><strong>Artes:</strong> Oficinas de música, dança, teatro, artesanato</li>
+                    <li><strong>Esportes:</strong> Professores de educação física e praticantes de esportes</li>
+                </ul>
+
+                <h3>Requisitos para ser Voluntário</h3>
+                <ul>
+                    <li>Ter no mínimo 16 anos (menores de 18 anos precisam de autorização dos pais)</li>
+                    <li>Disponibilidade mínima de 4 horas semanais</li>
+                    <li>Comprometimento com a causa social</li>
+                    <li>Pontualidade e responsabilidade</li>
+                    <li>Empatia e respeito à diversidade</li>
+                </ul>
+
+                <h3>Benefícios do Voluntariado</h3>
+                <ul>
+                    <li>Certificado de horas voluntárias</li>
+                    <li>Desenvolvimento de novas habilidades</li>
+                    <li>Networking com outros voluntários</li>
+                    <li>Experiência para o currículo</li>
+                    <li>Satisfação pessoal de fazer a diferença</li>
+                    <li>Participação em eventos e capacitações exclusivas</li>
+                </ul>
+
+                <p style="margin-top: 2rem; padding: 1.5rem; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 4px;">
+                    <strong>Pronto para começar?</strong> Acesse a página de <a href="cadastro.html" style="color: #f59e0b; font-weight: bold;">cadastro</a> 
+                    e preencha o formulário para se tornar um voluntário da ONG Esperança Solidária!
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ONG Esperança Solidária. Todos os direitos reservados.</p>
+        <p>CNPJ: 12.345.678/0001-90 | Utilidade Pública Municipal, Estadual e Federal</p>
+    </footer>
+</body>
+</html>
